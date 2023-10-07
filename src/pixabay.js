@@ -29,7 +29,9 @@ export default class ImagesApiService {
       this.page += 1;
       return response.data;
     } catch (error) {
-      Notify.failure('Failed to fetch images. Please try again later.');
+      Notify.failure(
+        'Sorry, there are no images matching your search query. Please try again.'
+      );
       throw error;
     }
   }
